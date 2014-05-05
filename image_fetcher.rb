@@ -17,6 +17,9 @@ class ImageFetcher
   end
 
   def only_imgur_images
-    @data["data"]["children"].map { |child| child["data"]["url"] if child["data"]["url"].include?"i.imgur.com"}.compact
+    @data["data"]["children"].map { |child|
+      child["data"]["url"] if child["data"]["url"].include?"i.imgur.com"
+    }.compact
   end
+
 end
