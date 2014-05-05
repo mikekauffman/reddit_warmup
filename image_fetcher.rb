@@ -17,9 +17,7 @@ class ImageFetcher
   end
 
   def only_imgur_images
-    all_images.select { |image|
-     image.include?"i.imgur.com"
-    }
+    all_images.select { |image| image.include?"i.imgur.com"}
   end
 
 end
